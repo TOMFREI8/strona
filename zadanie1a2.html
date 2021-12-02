@@ -1,0 +1,39 @@
+<html>
+<body>
+<div style="color:green;font: size 54px;px;">
+<script language="JavaScript">
+var D1_Freitag=prompt("dzień 1=","");
+var G1_Freitag=prompt("godzina 1=","");
+var D2_Freitag=prompt("dzień 2=","");
+var G2_Freitag=prompt("godzina 2=","");
+var ile;
+var sek;
+var sek_g;
+var razem;
+ var D1=parseFloat(D1_Freitag);
+ var D2=parseFloat(D2_Freitag);
+ var G1=parseFloat(G1_Freitag);
+ var G2=parseFloat(G2_Freitag);
+ 
+ if(D1>D2){
+     ile=D1-D2;
+     sek=ile*86400;
+     
+     sek_g=(24-G1)*3600;
+     
+     razem=(sek_g)+(sek);
+     document.write("Między="+D2+" stycznia a "+D1+" stycznia jest "+razem+" sekund <br>");
+ }
+ else{
+    ile=D2-D1;
+     sek=ile*86400;
+     sek_g2=G2*3600
+     razem=sek_g+sek;
+     document.write("Między="+D1+" stycznia a "+D2+" stycznia jest "+razem+" sekund <br>");
+ }
+</script>
+
+</div>
+
+</body>
+</html>
