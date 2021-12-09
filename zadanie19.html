@@ -1,0 +1,60 @@
+<html>
+    <head>
+            <title> Obliczenie obwodu prostokąta </title>
+
+<script language="JavaScript">
+    function pole_Freitag(a,h)
+    {
+    let a_Freitag=parseFloat(a)
+
+    let h_Freitag=parseFloat(h)
+
+    let pole = r_Freitag * h_Freitag;
+
+    document.getElementById("pokaz1").innerHTML = pole.toFixed(2) + "cm^2";
+
+    document.getElementsByName("pole")[0].value = pole.toFixed(2);
+ }
+    function obwod_Freitag(a,h)
+    {   
+
+        let a = parseFloat(a);
+        
+        let b = parseFloat(h);
+
+        let obwod = (a*2)+(b*2);
+        document.getElementById("pokaz2").innerHTML = obwod.toFixed(2) + "cm";
+        
+        document.getElementsByName("obwod")[0].value = obwod.toFixed(2);
+    }
+    </script>
+    </head>
+    <body>
+    Obliczanie pola i obwodu prostokąta
+    <br> <br>
+
+    <form name="formularz" action="..." onsubmit="pole_Freitag(this.a.value,this.b.value);
+    obwod_Freitag(this.a.value,this.b.value);return false">
+    Podaj a=
+    <input size="6" name="a">
+    Podaj b=
+    <input size="6" name="b">
+    <br>
+    <br>
+    <input TYPE="submit" Value="oblicz" >
+    <br>
+    <br>
+
+    pole=
+    <input size="6" name="pole">
+
+    obwod=
+
+    <input size="6" name="obwod">
+    </form>
+    <table>
+    <tr id="pokaz1"></tr>
+    <tr id="pokaz2"></tr>
+    </table>
+    </body>
+    </html>
