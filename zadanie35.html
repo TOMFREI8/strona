@@ -1,0 +1,34 @@
+<html>
+<!-- metatagi -->
+<head>
+<script type="text/javascript">
+function wyswietlDate(){
+ var Today = new Date();
+ var Month = (Today.getMonth()+1);
+ var Day = Today.getDate();
+ var Year = Today.getFullYear();
+ if(Year <= 99) Year += 1900
+ return Day + "-" + Month + "-" + Year;
+}
+</script>
+</head>
+<script type="text/javascript">
+function wyswietlprzegladarke(){
+ var przegladarka = new appnane();
+ var wersja = (przegladarka.navigator.appversion();
+ var dane = przegladarka.useragent();
+ var system = przegladarka.osepu();
+ var tryb = przegladarka.onLine();
+ var java = przegladarka.javaenabled();
+
+ 
+}
+</script>
+
+<body>
+<script type="text/javascript">
+ document.write("Dziś jest " + wyswietlDate());
+ document.write("przeglądarka = " + wyswietlprzegladarke());
+ </script>
+</body>
+</html>
